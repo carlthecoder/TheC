@@ -20,7 +20,7 @@
 
 // The main starting point of a C program:
 int main(int argc, char** argv)
-{  
-    
+{
+    puts("Welcome to the C!");
     return 0;
 }
