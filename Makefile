@@ -34,6 +34,8 @@ all: $(APPNAME)
 # Builds the app
 $(APPNAME): $(OBJ)
 	$(CC) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
+	#after build clean up removing .o and .d files, (comment the command if you want to keep these files)
+	$(RM) $(DEP) $(OBJ)		
 
 # Creates the dependecy rules
 %.d: $(SRCDIR)/%$(EXT)
@@ -52,10 +54,10 @@ $(OBJDIR)/%.o: $(SRCDIR)/%$(EXT)
 clean:
 	$(RM) $(DELOBJ) $(DEP) $(APPNAME)
 
-# Cleans only all files with the extension .d
+# Cleans only all files with the extension .d and .o
 .PHONY: cleandep
 cleandep:
-	$(RM) $(DEP)
+	$(RM) $(DEP) $(OBJ)
 
 #################### Cleaning rules for Windows OS #####################
 # Cleans complete project
