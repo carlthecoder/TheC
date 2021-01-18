@@ -1,0 +1,121 @@
+   C   
+-------
+
+In C there are no classes. Only procedures.
+Hence it's called a procedural language.
+
+In essence all global variables and functions can be seen everywhere throughout the program.
+Use 'static' to "encapsulate" a global into a file.
+A static global can only be seen in the file in which it is declared.
+
+C has no garbage collector and needs to manage it's own memory.
+
+A Translation Unit is a .c file together with all its includes.
+The C compiler compiles translation units into object files. Object files are also called modules.
+Then the linker links the object files to modules contained in third party libraries and in the C standard library.
+
+The Compiler has 8 translation fases.
+
+A compiler Token is a keyword, an identifier, a constant, a string literal, or a symbol. 
+A preprocessor Token: directives, defines,..
+
+The C Standard Library contains modules of standard functions
+
+C Types:
+ - Basic types:
+    - integer types : char, short, int, long, long long 
+    - real and complex floating point types : float, double, complex
+ - Enumerated types
+ - Void type
+ - Derived types:
+    - Pointers
+    - Arrays
+    - Structures
+    - Unions
+    - Functions
+
+
+When an object description includes storage size the type is an object type; if not it is incomplete.
+
+C can make use of bool as is defined in stdbool.h
+
+A char in C and C++ can be either signed or unsigned depending on the compiler. -> Therefor it's better to state explicitly which you want.
+
+To Print a long use #ld
+To Print an unsigned long use %lu
+To Print a long long use %lld
+To Print a unsigned long long use %llu
+To Print a memory address / pointer use %p
+
+Take care when mixing unsigned and signed integers. Especially when doing logical checks, implicit conversions can result in an error. 
+These types of errors can be very hard to debug!
+
+
+Standard Library Functions:
+---------------------------
+
+mbtowc
+mbstowcs
+wprintf     // to print wide strings
+
+sizeof
+
+Standard Library Headers
+------------------------
+math.h
+
+stdio.h
+    puts                // print string to output without null character                 
+    printf              // print (formatted) output
+    scanf               // read up to first whitespace from input
+    gets                // reads strings with spaces, up to first new line or null character
+    fgets               // like gets, but can specify how many characters to read. It also stores the new line. The third argument indicates which file to read from. For keyboard input use 'stdin'
+    getchar             // get a single char from input (buffer)
+    putchar             // put a single char to output (buffer)
+    stdint.h
+    stdlib.h    
+    fputs               //
+    sprintf()           // writes formatted output to a string. Works like printf, but takes a destination string as it's first parameter.
+    fprintf             // print (formatted) output to file
+    getc                // gets a character from the specified file
+
+string.h
+    strlen()
+    strcat()
+    strncat()
+    strcmp()
+    strncmp()
+    strcpy()
+    strncpy()    
+    strchr()            // returns a pointer to the first location of a given character in a string
+    strrchr()           // returns a pointer to the last location of a given character in a string
+    strstr()            // returns a pointer to the first location of the given substring 
+
+    atoi()              // convert string to integer
+    atof()              // convert string to float
+    atol()              // convert string to long
+    strtol()
+    strtoul()
+    strtod()
+
+ctype.h                 // for characters
+    isalnum()
+    isalpha()
+    isblank()
+    iscntrl()
+    isdigit()
+    isgraph()
+    isprint()
+    ispunct()
+    isspace()
+    isxdigit()
+    islower()
+    isupper()
+    tolower()
+    toupper()
+
+
+WIN32 Threading
+---------------
+CreateThread        -- function that returns a HANDLE to a thread object
+WaitForSingleObject -- allows the program to wait for a certain thread to finish before continuing

@@ -5,7 +5,7 @@
 # Compiler settings - Can be customized.
 CC = gcc
 CXXFLAGS = -std=c11 -Wall -g
-LDFLAGS = 
+LDFLAGS = -lm		#-lm links the math library
 
 # Makefile settings - Can be customized.
 APPNAME = c.bin
@@ -33,9 +33,7 @@ all: $(APPNAME)
 
 # Builds the app
 $(APPNAME): $(OBJ)
-	$(CC) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
-	#after build clean up removing .o and .d files, (comment the command if you want to keep these files)
-	$(RM) $(DEP) $(OBJ)		
+	$(CC) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)	
 
 # Creates the dependecy rules
 %.d: $(SRCDIR)/%$(EXT)

@@ -1,7 +1,8 @@
 #ifndef INTEGERS_CTC_H
 #define INTEGERS_CTC_H
 
-void integers_swap(int* arr, int i, int j);
-void integers_assignment(void);
+void Integers_Swap(int* arr, int i, int j);
+void Integers_Assignment(void);
+int Integers_ParseInt(char* intstring);
 
 #endif

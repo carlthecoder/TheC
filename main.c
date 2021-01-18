@@ -4,6 +4,8 @@
 #include <float.h>
 #include <ctype.h>
 #include <string.h>
+#include <math.h>
+#include "book.h"
 
 // Global external variables are assigned by default.
 // Declare them at the top of the file, but avoid their use as much as possible
@@ -18,9 +20,9 @@
 // like globals they are automatically assigned when not explicitly assigned
 //static int staticExternal;
 
+
 // The main starting point of a C program:
 int main(int argc, char** argv)
 {
-    puts("Welcome to the C!");
     return 0;
 }
