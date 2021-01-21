@@ -21,14 +21,53 @@
 // like globals they are automatically assigned when not explicitly assigned
 //static int staticExternal;
 
+typedef struct node_t
+{
+    int value;
+    struct node_t *lt;
+    struct node_t *rt;
+} Node;
 
+
+void Trees_OrderedVisit(Node* node)
+{
+    if (node == NULL)
+        return;
+
+    
+    printf("%d\n", node->value);
+
+    if (node->lt)
+    {
+        Trees_OrderedVisit(node->lt);
+    }
+    if (node->rt)
+    {
+        Trees_OrderedVisit(node->rt);
+    }
+    
+}
 
 // The main starting point of a C program:
 int main(int argc, char** argv)
 {
-    unsigned long long x = Integers_RecursiveParse("12345678912345678");
+    Node root;
+    root.value = 0;
 
-    printf("%llu\n", x);
+    Node lt;
+    lt.value = 1;
+    lt.lt = NULL;
+    lt.rt = NULL;
+
+    Node rt;
+    rt.value = 2;
+    rt.lt= NULL;
+    rt.rt = NULL;
+
+    root.lt = &lt;
+    root.rt = &rt;
+
+    Trees_OrderedVisit(&root);
 
     return 0;
 }
