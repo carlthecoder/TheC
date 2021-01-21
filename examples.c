@@ -326,3 +326,28 @@ int Examples_PlusPlus(int* index)
 {
 	return (*index += 1) -1;
 }
+
+void Examples_StringsAreStaticUnique(void)
+{
+    char *tptr = "just some text";
+    char aptr[] = "just some text";
+
+    // the pointer holds the address of the string literal
+    printf("%s\n", tptr);
+    printf("%p\n", tptr);
+
+    // the array holds the same value, but has a different address
+    printf("%s\n", aptr);
+    printf("%p\n", aptr);
+
+    // note that the address of the string is the same as the address of the pointer 
+    printf("%s\n", "just some text");
+    printf("%p\n", "just some text");
+}
+
+void Examples_strcpy(char *dest, char *src)
+{
+    // make clever use of pointer arithmetic, incrementation and comparison all at once
+    while((*dest++ = *src++) != '\0')
+    ;
+}

@@ -1,11 +1,13 @@
 #include <stdio.h>
+#include <string.h>
+#include <math.h>
 #include "integers.h"
 
-void Integers_Swap(int* arr, int i, int j)
+void Integers_Swap(int *x, int *y)
 {
-    int temp = arr[i];
-    arr[i] = arr[j];
-    arr[j] = temp;
+    int temp = *x;
+    *x = *y;
+    *y = temp;
 }
 
 void Integers_Assignment(void)
@@ -37,3 +39,16 @@ int Integers_ParseInt(char* intstring)
 
 
 // todo: recursive integer parse
+unsigned long long Integers_RecursiveParse(char *intstring)
+{   
+    if (*intstring == '\0')
+    {
+        return 0;
+    }
+    
+    int power = strlen(intstring) -1;
+
+    unsigned long long x = (*intstring - '0') * pow(10, power) + Integers_RecursiveParse(intstring + 1);
+
+    return x;
+}

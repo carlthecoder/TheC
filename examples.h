@@ -37,10 +37,15 @@ void Examples_Callback(void);
 
 void Examples_FormatSpecifiersDatatypes(void);
 
+void Examples_StringsAreStaticUnique(void);
+
 //void Examples_WindowsThreading(void);
 //void Examples_WindowsThreadingImproved(void);
 
 int Examples_PlusPlus(int* index);
+
+void Examples_strcpy(char *dest, char *src);
+
 
 #endif // !EXAMPLES_H
 
