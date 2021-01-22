@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "delegation.h"
+#include "../headers/delegation.h"
 
 int delegate_square(int x)
 {

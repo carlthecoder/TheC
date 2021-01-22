@@ -1,4 +1,4 @@
-#include "book.h"
+#include "../headers/book.h"
 
 // The struct is defined in the source file so that it cannot be accessed directly.
 // Because it is static it can only be seen in this file.

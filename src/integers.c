@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
-#include "integers.h"
+#include "../headers/integers.h"
 
 void Integers_Swap(int *x, int *y)
 {

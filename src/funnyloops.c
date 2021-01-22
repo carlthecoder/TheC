@@ -1,4 +1,4 @@
-#include "funnyloops.h"
+#include "../headers/funnyloops.h"
 
 void funnyloops_EvenTriangleABC(int rows)
 {

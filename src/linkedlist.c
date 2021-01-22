@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "linkedlist.h"
+#include "../headers/linkedlist.h"
 
 Node LinkedList_CreateNode(int value)
 {

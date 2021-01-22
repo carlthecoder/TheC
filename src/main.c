@@ -5,8 +5,8 @@
 #include <ctype.h>
 #include <string.h>
 #include <math.h>
-#include "book.h"
-#include "integers.h"
+#include "../headers/book.h"
+#include "../headers/integers.h"
 
 // Global external variables are assigned by default.
 // Declare them at the top of the file, but avoid their use as much as possible

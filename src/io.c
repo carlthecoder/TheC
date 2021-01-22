@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "io.h"
+#include "../headers/io.h"
 
 void io_charcopy(void)
 {    

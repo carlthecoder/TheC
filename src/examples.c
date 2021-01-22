@@ -1,7 +1,7 @@
-#include "examples.h"
-#include "book.h"
-#include "list.h"
-#include "symbolics.h"
+#include "../headers/examples.h"
+#include "../headers/book.h"
+#include "../headers/list.h"
+#include "../headers/symbolics.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>

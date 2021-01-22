@@ -1,5 +1,5 @@
 #define _USE_MATH_DEFINES
-#include "vector3.h"
+#include "../headers/vector3.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>

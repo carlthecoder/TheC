@@ -5,13 +5,13 @@
 # Compiler settings - Can be customized.
 CC = gcc
 CXXFLAGS = -std=c11 -Wall -g
-LDFLAGS = -lm		#-lm links the math library
+LDFLAGS = -lm	#lm to link to math.h dll
 
 # Makefile settings - Can be customized.
-APPNAME = c.bin
+APPNAME = TheC.bin
 EXT = .c
-SRCDIR = .
-OBJDIR = .
+SRCDIR = src
+OBJDIR = obj
 
 ############## Do not change anything from here downwards! #############
 SRC = $(wildcard $(SRCDIR)/*$(EXT))
@@ -33,7 +33,8 @@ all: $(APPNAME)
 
 # Builds the app
 $(APPNAME): $(OBJ)
-	$(CC) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)	
+	$(CC) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
+	$(RM) $(DEP)
 
 # Creates the dependecy rules
 %.d: $(SRCDIR)/%$(EXT)
@@ -52,10 +53,10 @@ $(OBJDIR)/%.o: $(SRCDIR)/%$(EXT)
 clean:
 	$(RM) $(DELOBJ) $(DEP) $(APPNAME)
 
-# Cleans only all files with the extension .d and .o
+# Cleans only all files with the extension .d
 .PHONY: cleandep
 cleandep:
-	$(RM) $(DEP) $(OBJ)
+	$(RM) $(DEP)
 
 #################### Cleaning rules for Windows OS #####################
 # Cleans complete project

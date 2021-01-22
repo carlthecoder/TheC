@@ -1,8 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include "printing.h"
-#include "sorting.h"
+#include "../headers/printing.h"
+#include "../headers/sorting.h"
 
 int sorting_mergesort(int* arr, int length)
 {

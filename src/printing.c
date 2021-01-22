@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "printing.h"
+#include "../headers/printing.h"
 
 int print_intarray(int* arr, int length)
 {

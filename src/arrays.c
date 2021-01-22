@@ -1,7 +1,7 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "arrays.h"
+#include "../headers/arrays.h"
 
 typedef struct
 {

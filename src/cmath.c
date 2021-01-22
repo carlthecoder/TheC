@@ -1,8 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
-#include "cmath.h"
-#include "helpers.h"
+#include "../headers/cmath.h"
+#include "../headers/helpers.h"
 
 int cmath_BiggestCommonDevisor(int a, int b)
 {
